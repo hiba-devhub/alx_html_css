@@ -33,8 +33,13 @@ body {
 
 /* HEADER */
 .site-header {
-  background: var(--bg-color);
+  background: transparent;
   padding: 1rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .site-header .container {
@@ -44,7 +49,8 @@ body {
 }
 
 .logo img {
-  height: 40px;
+  height: 50px;
+  width: auto;
 }
 
 .main-nav ul {
@@ -55,7 +61,7 @@ body {
 
 .main-nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: white;
   font-weight: bold;
 }
 
@@ -65,58 +71,73 @@ body {
 
 /* HERO */
 .hero {
-  padding: 4rem 0;
+  background-image: url('assets/headphones_hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 .hero-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
+  width: 100%;
 }
 
-.hero-text {
-  flex: 1 1 50%;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
+.hero-content h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.hero-text p {
+.hero-content p {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.btn-primary {
+.btn {
   background: var(--primary-color);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
+  color: white;
+  padding: 1rem 2rem;
   text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background: #0040cc;
 }
 
-.hero-image {
-  flex: 1 1 40%;
-}
 
-.hero-image img {
-  width: 100%;
-  height: auto;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .main-nav ul {
     gap: 1rem;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .site-header {
+    padding: 0.5rem 0;
   }
 }
