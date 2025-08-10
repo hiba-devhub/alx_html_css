@@ -1,0 +1,3 @@
+Project Overview
+Recreate the design provided in the Figma file exactly as a static webpage, ensuring a pixel-perfect match in layout, spacing, typography, and colors. The implementation must use only semantic HTML and CSS, with no external frameworks or JavaScript. The webpage should be fully responsive, adapting seamlessly across different screen sizes and breakpoints, while maintaining design consistency. Additionally, accessibility best practices must be applied, including proper keyboard navigation, meaningful ARIA roles, descriptive alternative text for images, and sufficient color contrast to ensure an inclusive user experience.
+
